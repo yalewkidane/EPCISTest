@@ -493,10 +493,10 @@ public static 	AggregationEventType getAggregationEventTypeSample(int count){
 	DestinationListType destinationList =new DestinationListType();
 	SourceDestType sourceDest3=new SourceDestType(  );
 	SourceDestType sourceDest4=new SourceDestType( );
-	sourceDest3.setValue("urn:epcglobal:cbv:sdt:owning_party");
-	sourceDest3.setType("urn:epc:id:sgln:0614141.00001."+count);
-	sourceDest4.setValue("urn:epcglobal:cbv:sdt:location");
-	sourceDest4.setType("urn:epc:id:sgln:0614141.00777."+count);
+	sourceDest3.setType("urn:epcglobal:cbv:sdt:owning_party");
+	sourceDest3.setValue("urn:epc:id:sgln:0614141.00001."+count);
+	sourceDest4.setType("urn:epcglobal:cbv:sdt:location");
+	sourceDest4.setValue("urn:epc:id:sgln:0614141.00777."+count);
 	
 	destinationList.getDestination().add(sourceDest3);
 	destinationList.getDestination().add(sourceDest4);

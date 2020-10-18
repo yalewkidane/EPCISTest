@@ -1,10 +1,8 @@
 package org.oliot.capture.utility;
 
 import java.io.BufferedReader;
-import java.io.DataOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.io.Reader;
 import java.io.StringWriter;
 import java.math.BigDecimal;
 import java.math.MathContext;
@@ -42,7 +40,8 @@ public class Capture {
 		EPCISDocumentType epcisDocument=makeBaseResultDocument();
 		   
 	   	  ObjectEventType objectEvent=sampleEpcisEvents.getObjectEventTypeSample();
-	   	  JAXBElement element=new JAXBElement(new QName("ObjectEvent"),ObjectEventType.class,objectEvent);
+	   	  @SuppressWarnings({ "rawtypes", "unchecked" })
+		JAXBElement element=new JAXBElement(new QName("ObjectEvent"),ObjectEventType.class,objectEvent);
 	   	  epcisDocument.getEPCISBody().getEventList().getObjectEventOrAggregationEventOrQuantityEvent().add(element);
 	   	  	 try {
 				JAXBContext jaxbContext = JAXBContext.newInstance(EPCISDocumentType.class);
@@ -70,7 +69,8 @@ public class Capture {
 		EPCISDocumentType epcisDocument=makeBaseResultDocument();
 		   
 	   	  ObjectEventType objectEvent=sampleEpcisEvents.getObjectEventTypeSample(count);
-	   	  JAXBElement element=new JAXBElement(new QName("ObjectEvent"),ObjectEventType.class,objectEvent);
+	   	  @SuppressWarnings({ "unchecked", "rawtypes" })
+		JAXBElement element=new JAXBElement(new QName("ObjectEvent"),ObjectEventType.class,objectEvent);
 	   	  epcisDocument.getEPCISBody().getEventList().getObjectEventOrAggregationEventOrQuantityEvent().add(element);
 	   	  	 try {
 				JAXBContext jaxbContext = JAXBContext.newInstance(EPCISDocumentType.class);
@@ -140,6 +140,7 @@ public class Capture {
 		EPCISDocumentType epcisDocument=makeBaseResultDocument();
 		   
 		TransactionEventType transactionEvent=sampleEpcisEvents.getTransactionEventTypeSample(count);
+		@SuppressWarnings({ "unchecked", "rawtypes" })
 	   	  JAXBElement element=new JAXBElement(new QName("TransactionEvent"),TransactionEventType.class,transactionEvent);
 	   	  epcisDocument.getEPCISBody().getEventList().getObjectEventOrAggregationEventOrQuantityEvent().add(element);
 	   	  	 try {
@@ -166,6 +167,7 @@ public class Capture {
 		EPCISDocumentType epcisDocument=makeBaseResultDocument();
 		   
 		AggregationEventType ggregationEvent=sampleEpcisEvents.getAggregationEventTypeSample(count);
+		@SuppressWarnings({ "unchecked", "rawtypes" })
 	   	  JAXBElement element=new JAXBElement(new QName("AggregationEvent"),AggregationEventType.class,ggregationEvent);
 	   	  epcisDocument.getEPCISBody().getEventList().getObjectEventOrAggregationEventOrQuantityEvent().add(element);
 	   	  	 try {
@@ -196,7 +198,7 @@ public class Capture {
 		  TransformationEventType transformationEvent=sampleEpcisEvents.getTransformationEventTypeSample(count);
 		  
 		  extension.setTransformationEvent(transformationEvent);
-		
+		  @SuppressWarnings({ "unchecked", "rawtypes" })
 		  JAXBElement element=new JAXBElement(new QName("extension"),extensionType.class,extension);
 	   	  epcisDocument.getEPCISBody().getEventList().getObjectEventOrAggregationEventOrQuantityEvent().add(element);
 	   	  	 try {
@@ -232,6 +234,7 @@ public class Capture {
 		// TODO Auto-generated catch block
 		e1.printStackTrace();
 	   }
+	   @SuppressWarnings("unused")
 	   EPCISHeaderType epcisHeader =new EPCISHeaderType();
 	   //epcisDocument.setEPCISHeader(epcisHeader);
 		 

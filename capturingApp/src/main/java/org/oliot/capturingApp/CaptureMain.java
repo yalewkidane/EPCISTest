@@ -8,7 +8,7 @@ import org.oliot.capture.utility.Capture;
  */
 public class CaptureMain 
 {
-	//private String client="143.248.55.183:8080";
+	//private String client="143.xxx.xx.183:8080";
 	private String client="localhost:8080";
     public String getClient() {
 		return client;
@@ -21,8 +21,8 @@ public class CaptureMain
 	public static void main( String[] args )
     {
     	CaptureMain capmain=new CaptureMain();
-    	//capmain.sampleObjectEventCapture(38);
-    	capmain.sampleAggregationEventCapture(41);
+    	capmain.sampleObjectEventCapture(38);
+    	//capmain.sampleAggregationEventCapture(41);
     	//capmain.sampleTransactionEventCapture(50);
     	//capmain.sampleTransformationEventCapture(60);
     	//capmain.sampeEventCapture(20);
