@@ -22,11 +22,11 @@ public class App
     	
     	//parameters.add("ObjectEventType");
     	//parameters.add("TransactionEventType");
-    	//parameters.add("AggregationEventType");
-    	parameters.add("TransformationEventType");
+    	parameters.add("AggregationEventType");
+    	//parameters.add("TransformationEventType");
     	//parameters.add("GE_eventTime");
     	//parameters.add("GE_recordTime");
-    	parameters.add("EQ_eventID");
+    	//parameters.add("EQ_eventID");
     	//parameters.add("EQ_action");
     	//parameters.add("EQ_bizStep");
     	//parameters.add("EQ_readPoint");
@@ -37,7 +37,7 @@ public class App
     	//parameters.add("EQ_transformationID");
   //  	parameters.add("MATCH_epc");
     	
-    	QueryUtility.client="143.248.55.183";
+    	QueryUtility.client="localhost";
     	ArrayList<QueryModel> queries;
     	String url="";
     	
@@ -46,7 +46,7 @@ public class App
     	url=QueryUtility.generateQueryStrin(queries);
     	
     	
-    	int count=3;
+    	//int count=3;
     	
     	/*
     	if((count%4)==0){

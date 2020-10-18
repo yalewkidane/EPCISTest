@@ -25,7 +25,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class QueryUtility {
 	
-	public static String client="143.248.55.183";
+	public static String client="143.xx.xx.xxx";
 	public static String generateQueryStrin(ArrayList<QueryModel> queryList){
 		String url="http://"+client+":8080/epcis/Service/Poll/SimpleEventQuery?";
 		
