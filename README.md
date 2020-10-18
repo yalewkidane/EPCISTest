@@ -1,4 +1,7 @@
 # EPCIST Capturing and Accessing Application
+
+*Java code for sample capturing and accessing application for oliot EPCIS
+
 ![alt text](https://github.com/yalewkidane/EPCIS_Capturing_Accessing_App/blob/master/Doc/image/Capturing_accessing_app.png)
 ## EPCIS Capturing APPlication 
 
